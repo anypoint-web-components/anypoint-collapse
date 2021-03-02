@@ -14,7 +14,7 @@
     "Pawel Psztyc"
   ],
   "contributors": [
-    "The Advanced REST client authors <arc@mulesoft.com>"
+    "Your name can be here!"
   ],
   "repository": {
     "type": "git",
@@ -25,50 +25,40 @@
     "email": "arc@mulesoft.com"
   },
   "dependencies": {
-    "@advanced-rest-client/arc-resizable-mixin": "^1.1.0",
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2"
+    "@advanced-rest-client/arc-resizable-mixin": "^1.2.0",
+    "lit-element": "^2.4.0",
+    "lit-html": "^1.3.0"
   },
   "devDependencies": {
-    "@advanced-rest-client/testing-karma-sl": "^1.3.1",
-    "@open-wc/demoing-storybook": "^2.0.0",
-    "@open-wc/eslint-config": "^2.0.0",
-    "@open-wc/testing": "^2.0.0",
-    "@open-wc/testing-karma": "^3.0.0",
-    "deepmerge": "^4.2.2",
-    "es-dev-server": "^1.55.0",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.10",
-    "prettier": "^2.0.4",
-    "sinon": "^9.0.2",
-    "typescript": "^3.9.5",
+    "@open-wc/eslint-config": "^2.1.0",
+    "@open-wc/testing": "^2.5.32",
+    "@web/dev-server": "^0.1.8",
+    "@web/test-runner": "^0.12.15",
+    "@web/test-runner-playwright": "^0.8.4",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "sinon": "^9.2.4",
+    "typescript": "^4.2.2",
     "typescript-lit-html-plugin": "^0.9.0"
   },
   "scripts": {
-    "start": "es-dev-server --app-index demo/index.html --node-resolve --open --watch",
+    "start": "web-dev-server --app-index demo/index.html --node-resolve --open --watch --root-dir .",
     "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
     "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
-    "lint:prettier": "prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "format:prettier": "prettier \"**/*.js\" --write --ignore-path .gitignore",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "format": "npm run format:eslint && npm run format:prettier",
-    "test": "karma start --coverage",
-    "test:watch": "karma start --auto-watch=true --single-run=false",
-    "test:sl": "karma start karma.sl.config.js --compatibility auto --coverage",
-    "storybook": "start-storybook",
-    "storybook:build": "build-storybook"
+    "lint:types": "tsc",
+    "lint": "npm run lint:eslint",
+    "format": "npm run format:eslint",
+    "test": "web-test-runner test/**/*.test.js --coverage --node-resolve --playwright --browsers chromium firefox webkit",
+    "test:watch": "web-test-runner test/**/*.test.js --node-resolve --watch --playwright --browsers chromium",
+    "gen:wc": "wca analyze \"*.js\" --outFile custom-elements.json"
   },
   "eslintConfig": {
     "extends": [
       "@open-wc/eslint-config",
       "eslint-config-prettier"
     ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "arrowParens": "always"
   },
   "husky": {
     "hooks": {

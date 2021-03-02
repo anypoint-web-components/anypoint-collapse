@@ -79,13 +79,13 @@ describe('Flex layout', () => {
     assert.equal(collapse.style.maxHeight, '0px');
   });
 
-  it('opened changes trigger iron-resize', () => {
+  it('opened changes trigger resize', () => {
     const spy = sinon.stub();
-    collapse.addEventListener('iron-resize', spy);
+    collapse.addEventListener('resize', spy);
     // No animations for faster test.
     collapse.noAnimation = true;
     collapse.opened = false;
-    assert.isTrue(spy.calledOnce, 'iron-resize was fired');
+    assert.isTrue(spy.calledOnce, 'resize was fired');
   });
 
   it.skip('overflow is hidden while animating', (done) => {
