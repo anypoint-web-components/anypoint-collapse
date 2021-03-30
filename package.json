@@ -1,7 +1,7 @@
 {
   "name": "@anypoint-web-components/anypoint-collapse",
   "description": "A modern port of iron-collapse element. It creates a collapsible block of content.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "main": "index.js",
   "module": "index.js",
