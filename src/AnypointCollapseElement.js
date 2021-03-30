@@ -18,7 +18,8 @@ const horizontalChanged = Symbol('horizontalChanged');
 const toggleAttribute = Symbol('toggleAttribute');
 
 export class AnypointCollapseElement extends ArcResizableMixin(LitElement) {
-  static get styles() {
+  // eslint-disable-next-line class-methods-use-this
+  get styles() {
     return css`
     :host {
       display: block;
@@ -293,6 +294,9 @@ export class AnypointCollapseElement extends ArcResizableMixin(LitElement) {
   }
 
   render() {
-    return html`<slot></slot>`;
+    return html`
+      <style>${this.styles}</style>
+      <slot></slot>
+    `;
   }
 }
