@@ -275,7 +275,7 @@ export class AnypointCollapseElement extends ArcResizableMixin(LitElement) {
    * Toggles attribute on the element
    *
    * @param {string} attr The attribute to toggle
-   * @param {boolean} add Whenther the attribute should be added or removed.
+   * @param {boolean} add Whether the attribute should be added or removed.
    */
   [toggleAttribute](attr, add) {
     const has = this.hasAttribute(attr);
