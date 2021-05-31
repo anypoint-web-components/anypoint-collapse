@@ -1,50 +1,60 @@
 {
-  "version": 2,
+  "version": "experimental",
   "tags": [
     {
       "name": "anypoint-collapse",
-      "description": "A component with a title and an action counter",
-      "properties": [
+      "path": "./anypoint-collapse.js",
+      "attributes": [
         {
           "name": "horizontal",
-          "type": "boolean",
           "description": "Renders the collapse horizontally when true and vertically otherwise",
-          "default": false
+          "type": "boolean"
         },
         {
           "name": "opened",
-          "type": "boolean",
           "description": "Set opened to true to show the collapse element and to false to hide it.",
-          "default": false
+          "type": "boolean"
         },
         {
           "name": "noAnimation",
-          "type": "boolean",
           "description": "Set noAnimation to true to disable animations.",
-          "default": false
+          "type": "boolean"
+        }
+      ],
+      "properties": [
+        {
+          "name": "horizontal",
+          "attribute": "horizontal",
+          "description": "Renders the collapse horizontally when true and vertically otherwise",
+          "type": "boolean"
+        },
+        {
+          "name": "opened",
+          "attribute": "opened",
+          "description": "Set opened to true to show the collapse element and to false to hide it.",
+          "type": "boolean"
+        },
+        {
+          "name": "noAnimation",
+          "attribute": "noAnimation",
+          "description": "Set noAnimation to true to disable animations.",
+          "type": "boolean"
+        },
+        {
+          "name": "transitioning",
+          "type": "boolean"
         }
       ],
       "events": [
         {
-          "name": "openedchange",
-          "description": "Dsipatcherd when opened state change. This only happens when the `opened` controlling function was triggered (like toggle())"
+          "name": "openedchange"
         },
         {
-          "name": "transitioningchange",
-          "description": "Dsipatcherd `transitioning` property chage."
-        }
-      ],
-      "slots": [
+          "name": "transitioningchange"
+        },
         {
-          "name": "default",
-          "description": "The content to render"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--anypoint-collapse-transition-duration",
-          "description": "Transition duration in ms",
-          "type": "Duration"
+          "name": "resize",
+          "description": "Dispatched when the element should re-layout itself."
         }
       ]
     }

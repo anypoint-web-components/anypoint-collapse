@@ -1,8 +1,5 @@
-import {
-  fixture,
-  assert,
-} from '@open-wc/testing';
-import * as sinon from 'sinon';
+import { fixture, assert, html } from '@open-wc/testing';
+import sinon from 'sinon';
 import '../anypoint-collapse.js';
 
 /**
@@ -15,7 +12,7 @@ describe('Flex layout', () => {
    * @return {Promise<AnypointCollapseElement>}
    */
   async function basicFixture() {
-    return fixture(`
+    return fixture(html`
       <div id="container" style="height: 200px; display: flex;">
         <anypoint-collapse id="collapse" opened style="flex: 1 0 auto">
           <div style="height:100px;">

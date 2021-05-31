@@ -1,7 +1,3 @@
-[![Build Status](https://travis-ci.com/anypoint-web-components/anypoint-collapse.svg)](https://travis-ci.com/anypoint-web-components/anypoint-collapse)
-
-[![Published on NPM](https://img.shields.io/npm/v/@anypoint-web-components/anypoint-collapse.svg)](https://www.npmjs.com/package/@anypoint-web-components/anypoint-collapse)
-
 # AnypointCollapse
 
 A modern port of iron-collapse element. It creates a collapsible block of content.
@@ -10,11 +6,15 @@ By default, the content will be collapsed.  Use `opened` or `toggle()` to show/h
 The element adjusts the max-height/max-width of the collapsible element to show/hide the content.
 Avoid putting padding/margin/border on the collapsible directly, and instead put a div inside and style that.
 
+[![tests](https://github.com/anypoint-web-components/anypoint-collapse/actions/workflows/deployment.yml/badge.svg)](https://github.com/anypoint-web-components/anypoint-collapse/actions/workflows/deployment.yml)
+
+[![Published on NPM](https://img.shields.io/npm/v/@anypoint-web-components/anypoint-collapse.svg)](https://www.npmjs.com/package/@anypoint-web-components/anypoint-collapse)
 
 ## Usage
 
 ### Installation
-```
+
+```sh
 npm install @anypoint-web-components/anypoint-collapse --save
 ```
 
@@ -66,6 +66,7 @@ npm start
 ```
 
 ### Running the tests
+
 ```sh
 npm test
 ```

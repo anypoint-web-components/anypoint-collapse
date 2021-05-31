@@ -1,5 +1,5 @@
-import { fixture, assert, nextFrame } from '@open-wc/testing';
-import * as sinon from 'sinon';
+import { fixture, assert, nextFrame, html } from '@open-wc/testing';
+import sinon from 'sinon';
 import '../anypoint-collapse.js';
 
 /**
@@ -12,7 +12,7 @@ describe('AnypointCollapse', () => {
    * @return {Promise<AnypointCollapseElement>}
    */
   async function basicFixture() {
-    return fixture(`<anypoint-collapse opened>
+    return fixture(html`<anypoint-collapse opened>
       <div style="height:100px;">
         Lorem ipsum
       </div>
@@ -23,7 +23,7 @@ describe('AnypointCollapse', () => {
    * @return {Promise<AnypointCollapseElement>}
    */
   async function emptyFixture() {
-    return fixture(`<anypoint-collapse opened></anypoint-collapse>`);
+    return fixture(html`<anypoint-collapse opened></anypoint-collapse>`);
   }
 
   /**
