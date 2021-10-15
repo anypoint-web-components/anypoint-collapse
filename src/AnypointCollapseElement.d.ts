@@ -4,6 +4,7 @@ import { ArcResizableMixin } from '@advanced-rest-client/arc-resizable-mixin';
 /**
  * @fires openedchange
  * @fires transitioningchange
+ * @deprecated Migrate to @anypoint-web-components/awc.
  */
 declare class AnypointCollapseElement {
   static get styles(): CSSResult;

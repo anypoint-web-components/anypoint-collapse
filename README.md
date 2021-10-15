@@ -1,4 +1,8 @@
-# AnypointCollapse
+# Deprecated
+
+This component has been moved to `anypoint-web-components/awc`.
+
+-----
 
 A modern port of iron-collapse element. It creates a collapsible block of content.
 By default, the content will be collapsed.  Use `opened` or `toggle()` to show/hide the content.
